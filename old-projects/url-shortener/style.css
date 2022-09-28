@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./fonts/Inter-roman-latin.var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("./fonts/Inter-italic-latin.var.woff2") format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  font-family: "Inter var", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  min-height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 120px;
+
+  background-color: #161616;
+}
+
+h1 {
+  font-size: clamp(36px, 3vw, 48px);
+  font-weight: 600;
+
+  color: #fff;
+}
+
+h2 {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
+
+  color: #fff;
+}
+
+h3 {
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 400;
+
+  color: #d9d9d9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+#url-shortener {
+  display: flex;
+  flex-direction: column;
+
+  width: 33vw;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+#url-shortener form {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+#url-shortener form input {
+  width: 100%;
+  height: 60px;
+
+  padding: 0 30px;
+
+  outline: none;
+  border: none;
+
+  border-radius: 10px;
+
+  color: #fff;
+  background-color: #232323;
+}
+
+#url-shortener form button {
+  display: grid;
+  place-items: center;
+
+  min-width: 60px;
+  min-height: 60px;
+
+  outline: none;
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  background-color: #232323;
+}
+
+#url-shortener form button svg {
+  pointer-events: none;
+
+  fill: #555555;
+
+  transition: 0.15s ease;
+  transition-property: fill;
+}
+
+#url-shortener form button:hover svg {
+  fill: #fff;
+
+  animation: svgHover 0.15s ease forwards;
+}
+
+#url-shortener form button:focus svg {
+  animation: buttonClick 0.5s ease forwards;
+}
+
+#url-shortener h3 {
+  color: #cf3b3b;
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+
+  width: 33vw;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+#result span {
+  display: flex;
+  flex-direction: row;
+
+  width: fit-content;
+
+  align-items: center;
+}
+
+#result span a,
+#result span a h3 {
+  color: #fff;
+
+  transition: 0.15s ease;
+  transition-property: color;
+}
+
+#result button {
+  padding: 8px 16px;
+
+  outline: none;
+  border: none;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  color: #555555;
+  background-color: #232323;
+
+  transition: 0.15s ease;
+  transition-property: color;
+}
+
+#result button:hover {
+  color: #fff;
+}
+
+footer,
+footer a {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+}
+
+footer a svg {
+  pointer-events: none;
+
+  fill: #555555;
+
+  transition: 0.15s ease;
+  transition-property: fill;
+}
+
+footer a:hover svg {
+  fill: #fff;
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: translateY(0px);
+  }
+  49% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes svgHover {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  #url-shortener {
+    width: 50vw;
+  }
+
+  #result {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #url-shortener {
+    width: 75vw;
+  }
+
+  #result {
+    width: 75vw;
+  }
+
+  #url-shortener form input {
+    height: 40px;
+  }
+  #url-shortener form button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  #url-shortener form button svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  #title img {
+    display: none;
+  }
+}
