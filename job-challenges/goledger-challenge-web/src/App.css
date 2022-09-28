@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 36px);
+  font-weight: 500;
+  color: black;
+}
+
+h2 {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
+}
+
+.primary-color {
+  color: #21a5fd;
+}
+
+.secondary-card-info {
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
+
+  color: #808080;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@keyframes slideUp10 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideFadeDown10 {
+  0% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideDown10 {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideDown20 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideLeft20 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
