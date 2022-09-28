@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+
+    width: clamp(20%, 25vw, 100%);
+    
+    align-items: center;
+    
+    margin: 0 auto;
+    padding: 30px;
+
+    gap: 30px;
+
+    text-align: center;
+}
+
+#img-div{
+    display: flex;
+    flex-direction: column;
+
+    max-width: fit-content;
+
+    align-items: center;
+    
+    gap: 15px;
+}
+
+#image{
+    max-width: 496px;
+    width: 100%;
+}

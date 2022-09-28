@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+}
+
+#survey-form{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 320px;
+
+    gap: 10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Form's Title</h1>
+    <p id="description">This is a form.</p>
+
+    <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input required type="text" name="name" id="name" placeholder="Type in your name.">
+        
+        <label for="email" id="email-label">Email</label>
+        <input required type="email" name="email" id="email" placeholder="Type in your e-mail.">
+        
+        <label for="number" id="number-label">Number</label>
+        <input type="number" name="number" id="number" placeholder="Type in a number." min="0" max="10">
+        
+        <select id="dropdown">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+        </select>
+
+        <div>
+                <input type="radio" name="profession" id="teacher" value="teacher">
+                <label for="teacher">Teacher</label>
+                <input type="radio" name="profession" id="developer" value="developer">
+                <label for="developer">Developer</label>
+                <input type="radio" name="profession" id="lawyer" value="lawyer">
+                <label for="lawyer">Lawyer</label>     
+        </div>
+
+        <div>
+                <input type="radio" name="age" id="under-18" value="under-18">
+                <label for="under-18">Under 18</label>
+                <input type="radio" name="age" id="under-21" value="under-21">
+                <label for="under-21">Under 21</label>
+                <input type="radio" name="age" id="of-age" value="of-age">
+                <label for="of-age">Of Age 🍻</label>     
+        </div>
+
+        <div>
+            <input type="checkbox" name="answer" id="checkbox-A" value="A">
+            <label for="checkbox-A">A</label>     
+        </div>
+        <div>
+            <input type="checkbox" name="answer" id="checkbox-B" value="B">
+            <label for="checkbox-B">B</label>     
+        </div>
+        <div>
+            <input type="checkbox" name="answer" id="checkbox-C" value="C">
+            <label for="checkbox-C">C</label>     
+        </div>
+
+        <textarea name="comments" id="comment-area" placeholder="Any comments?"></textarea>
+        
+        <button type="submit" form="survey-form" id="submit">SUBMIT</button>        
+    </form>
+</body>
+</html>
