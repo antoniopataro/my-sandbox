@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("./fonts/Inter-roman-latin.var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("./fonts/Inter-italic-latin.var.woff2") format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Inter var", sans-serif;
+
+  background-color: #22252d;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+  height: 675px;
+
+  align-items: center;
+
+  box-shadow: 20px 20px 20px #1d1f26, -20px -20px 20px #272b34;
+
+  border-radius: 30px;
+}
+
+.header {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 13%;
+
+  padding: 28px;
+}
+
+.header #theme-switcher {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px;
+
+  border-radius: 10px;
+
+  background-color: #2a2d37;
+}
+
+.header #theme-switcher button {
+  display: grid;
+  place-items: center;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 6px 12px;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  transition: 0.15s ease;
+  transition-property: background-color;
+}
+
+.header #theme-switcher #theme-indicator {
+  position: absolute;
+
+  z-index: 0;
+
+  width: 40px;
+  height: 25px;
+
+  transform: translateX(42px);
+
+  border-radius: 5px;
+
+  background-color: #22242c;
+
+  transition: 0.15s ease;
+  transition-property: transform;
+}
+
+.header a {
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  right: 30px;
+}
+
+.header a .github-icon {
+  fill: #5f6169;
+
+  transition: 0.15s ease;
+  transition-property: fill;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 28%;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  padding: 0 28px;
+  padding-bottom: 28px;
+
+  color: #fff;
+
+  font-size: 24px;
+}
+
+#main #display {
+  height: 54px;
+  width: 100%;
+  text-align: end;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#main #sub-display {
+  font-size: 16px;
+  width: 100%;
+  text-align: right;
+  overflow: scroll;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 100%;
+  height: 59%;
+
+  gap: 15px;
+  padding: 45px 28px;
+
+  border-radius: 30px;
+
+  background-color: #2a2d37;
+}
+
+#footer button {
+  display: grid;
+  place-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  outline: none;
+  border: none;
+
+  font-family: "Inter var", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  color: white;
+  background-color: #282b33;
+
+  transition: 0.15s ease;
+  transition-property: background-color;
+}
+
+#footer .operator {
+  font-size: 18px;
+  font-weight: 500;
+
+  color: #a9585d;
+}
+
+#footer .special {
+  font-weight: 500;
+
+  color: #60dcc9;
+}
+
+#theme-switcher {
+  fill: #5f6169;
+}
+
+button .active {
+  fill: #fff;
+
+  transition: 0.15s ease;
+  transition-property: fill;
+}
+
+button .inactive {
+  fill: #d9d9d9;
+
+  transition: 0.15s ease;
+  transition-property: fill;
+}
+
+@media (max-width: 425px) {
+  #calculator {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #footer button {
+    width: 100%;
+    height: 100%;
+  }
+}
