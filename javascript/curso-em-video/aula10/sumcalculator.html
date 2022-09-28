@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="A simple calculator of the sum of two numbers.">
+    <title>Calculator - Sum of two Numbers</title>
+</head>
+<style>
+    @font-face {
+        font-family: "NEXA W01 HEAVY";
+        src: url("fonts\NEXA W01 HEAVY.TTF");}
+    body{
+        background-color: rgba(0, 0, 0, 0.075);}
+    #dashedbox{
+        height: 200px;
+        width: 500px;
+        border-style: dashed;
+        border-color: #0000003a;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+    #content-justifier{
+        margin-bottom: 20px;}
+    #title{
+        font-family: NexaW01-Heavy;
+        margin-left: 65px;}
+    #inputs{
+        font-family: Nexa;}
+    #res{
+        font-family: Nexa;
+        margin-top: 20px;}
+    #calculatebutton{
+        font-family: Nexa;
+        color: white;
+        width: 100px;
+        background-color: rgb(253, 46, 81);
+        border-width: 0px;    
+        border-radius: 3px;  
+        border-style: solid;
+        height: 30px;}
+    #n1input{
+        height: 27px;
+        border-color: #0000003a;
+        border-radius: 3px;
+        border-width: 1px;}
+    #n2input{
+    height: 27px;
+    border-color: #0000003a;
+    border-radius: 3px;
+    border-width: 1px;}
+</style>
+<body>
+    <div id="dashedbox">
+        <div id="content-justifier">
+            <div id="title"><h1>Sum of Two Numbers</h1></div>
+            <div id="inputs">
+                <input type="number" name="n1" id="n1input"> +
+                <input type="number" name="n2" id="n2input">
+                <input type="button" value="Calculate!" id="calculatebutton">
+            </div>
+            <div id="res">
+                =
+            </div>
+        </div>
+    </div>
+    <script>
+            var tn1 = document.querySelector("input#n1input")
+            var tn2 = document.querySelector("input#n2input")
+            var res = document.querySelector("div#res")
+
+            var calculatebutton = document.querySelector("input#calculatebutton")
+            calculatebutton.addEventListener('click', sum)
+            calculatebutton.addEventListener('mouseenter', colorchangein)
+            calculatebutton.addEventListener('mouseout', colorchangeout)
+
+
+        function sum(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)            
+            var s = n1 +  n2
+            res.innerHTML = `= ${s}`
+        }
+
+        function colorchangein(){
+            document.querySelector("input#calculatebutton").style.backgroundColor="red"}
+        function colorchangeout(){
+            document.querySelector("input#calculatebutton").style.backgroundColor= "rgb(253, 46, 81)";}
+
+    </script>
+</body>
+</html>

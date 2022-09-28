@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'NexaW01Heavy';
+    src: url(NEXAW01HEAVY.TTF);
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url(nexaregular.otf);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+    background-color: rgba(51, 36, 98, 0.972);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    font-family: 'Nexa';
+}
+
+h1{
+    font-family: 'NexaW01Heavy';
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+}
+
+#title{
+    padding: 40px;
+}
+
+#content{
+    width: 650px;
+    height: 500px;
+    background: #FFFFFF;
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tabuadaInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 135px;
+    width: 100%;
+
+    padding-top: 60px;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+#tabuadaIndex{
+    width: 45px;
+    height: 35px;
+    border-radius: 10px;
+
+    font-family: 'Nexa';
+    font-size: 18px;
+    text-align: center;
+}#tabuadaIndex:hover{
+    background-color: rgba(226, 226, 226, 0.521);
+
+    transition: all linear 0.2s;
+}
+
+#executeButton{
+    margin-top: 20px;
+
+    font-family: Nexa;
+    color: white;
+
+    width: 120px;
+    height: 36px;
+    background-color: rgba(201, 135, 255, 0.199);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 200px;
+
+    cursor: pointer;
+
+}#executeButton:hover{
+    background-color: rgba(201, 135, 255, 0.521);
+
+    transition: all linear 0.2s;
+}
+
+#tabuadaShowcase{
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 271px;
+    
+    font-family: 'Nexa';
+    font-size: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #000000;
+    border-radius: 20px;
+    border-color: black;
+    box-sizing: border-box;
+
+}#tabuadaShowcase::-webkit-scrollbar{
+    width: 0px;
+}

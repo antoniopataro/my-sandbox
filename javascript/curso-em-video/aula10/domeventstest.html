@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Test</title>
+</head>
+<style>
+    div#area{
+        color: black;
+        background-color: lightblue;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div id="area">
+        testing
+    </div>
+    <script>
+        var a = document.getElementById("area")
+            a.addEventListener('click', clicked)
+            a.addEventListener('mouseenter', mousein)
+            a.addEventListener('mouseout', mouseleave)
+        function clicked() {            
+            a.innerHTML = 'wow'
+        }
+        function mousein(){
+            a.style.backgroundColor="green"
+        }
+        function mouseleave(){
+            a.style.backgroundColor="lightblue"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link type="text/css" rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<header>
+    <div id="title"><h1>Analisador de Números</h1></div>
+</header>
+
+<main>
+    <div id="container">
+        <div id="topActions">
+            <h2>Número (entre 1 e 100): </h2>
+            <input type="number" name="" id="numberInput">
+            <button onclick="joinList()" id="addButton">Adicionar</button>
+        </div>
+
+        <div id="middleActions">
+        <select name="selectDisplayName" id="selectDisplay" size="10">
+
+        </select>
+        <div id="middleJustifier">
+        <div id="verifiedState"></div>
+        <div id="Information"></div>
+        </div>
+        </div>
+
+        <div id="endButtonDiv">
+            <button onclick="endInformation()" id="endButton">Finalizar</button>
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <a id="footerContent" href="https://instagram.com/antoniopataro"><h2>> antoniopataro <</h2></a>
+</footer>   
+</body>
+<script src="code.js"></script>
+</html>

@@ -1,0 +1,165 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'NexaW01Heavy';
+    src: url(NEXAW01HEAVY.TTF);
+}
+
+body{
+    background-color: #145bc5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: 'NexaW01Heavy';
+}
+h2{
+    font-family: 'Nexa';
+}
+input{
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.80);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+    border-radius: 100px;
+    color: white;
+    background-color: rgba(20, 91, 197, 0.75);
+    cursor: pointer;
+    border: none;
+}button:hover{
+    background-color: #145bc5;
+
+    transition: all linear 0.25s;
+}
+select{
+    font-family: 'Nexa';
+    padding: 10px;
+}
+
+
+header{
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+}
+#title{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container{
+    width: 700px;
+    height: 100%;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+#topActions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 12px;
+
+    height: 20px;
+}
+#numberInput{
+    font-family: 'Nexa';
+    text-align: center;
+}
+#addButton{
+    width: 100px;
+    font-family: 'Nexa';
+}
+
+
+#middleActions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-height: 200px;
+}
+#selectDisplay{
+    width: 200px;
+    border-radius:5px;
+}
+#selectDisplay::-webkit-scrollbar{
+    border-radius: 100px;
+    width: 5px;
+}#selectDisplay::-webkit-scrollbar-track{
+    background:rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}#selectDisplay::-webkit-scrollbar-thumb{
+    background: rgba(20, 91, 197, 0.75);
+    border-radius: 100px;
+}#selectDisplay::-webkit-scrollbar-thumb:hover{
+    background: #145bc5;
+}
+
+#middleJustifier{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    gap: 20px;
+}
+#verifiedState{
+    color: red;
+    font-family: 'Nexa';
+    font-size: 12px;
+}#Information{
+    font-family: 'Nexa';
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#endButtonDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+#endButton{
+    width: 100px;
+    font-family: 'Nexa';
+    height: 20px;
+
+}
+
+
+footer{
+    padding: 40px;
+}
+#footerContent{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}

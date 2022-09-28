@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verifier</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section id="section-1">
+        <header><h1>Age Verifier</h1></header>
+        <main id="main-section">
+
+            <div id="main-block">
+                <div id="year-input">Year of Birth: <input name="year-input" type="number" id="year"></div>
+                <div id="gender-input">Gender: <div><input name="gender" type="radio" value="male" id="gender-male"> Male</div><div><input name="gender" type="radio" value="female" id="gender-female"> Female</div></div>
+                <div id="verify-button"><input type="button" id="submit-button" value="Verify!" onclick="result()"></div>
+            </div>   
+
+            <div id="result"></div>
+
+            <div><img id="res-img" src=""></div>
+
+        </main>
+    </section>
+    <script src="code.js"></script>
+</body>
+</html>

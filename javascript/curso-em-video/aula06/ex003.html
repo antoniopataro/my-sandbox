@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALÁRIO</title> <!-- Comentário em HTML -->
+    <style>
+        body {
+            background-color: #ffe4c4; /* Comentário em CSS */
+            color: black;
+            font: normal 12pt Roboto;
+        }
+        h1 {
+            color: #13002be7;
+        }
+    </style>
+</head>
+<body>
+    <h1> Salário</h1>
+    <p> E se seus salários fossem definidos por dois números?</p>
+    <script>
+        n1=Number(prompt('Digite um número: '))
+        n2=Number(prompt('Digite outro número: '))
+        soma=n1+n2        
+        alert(`A soma de ${n1} com ${n2} é igual a ${soma.toFixed(2).replace('.', ',')}`) // esse tipo de formatação exige o uso das crases para strings
+        alert(`Agora seu salário será ${soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}).replace('.', ',')}`)
+        document.write(`Seu salário = ${soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}).replace('.', ',')}`)
+    </script>
+</body>
+</html>
+
+<!-- em JS, String(n) converte n para string, assim como n.to.String()
+
+    operações com strings:
+
+    s.length
+    s.toUpperCase()
+    s.toLowerCase()
+
+-->
